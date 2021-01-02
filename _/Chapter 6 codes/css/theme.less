@@ -1,0 +1,132 @@
+/* CONTENTS
+/////////////////////////////////////
+*/
+// 00. LESS
+/*
+01. BASE
+02. LAYOUT
+03. MODULES
+04. STATE
+
+This stylesheet is a starting place. Include your own Base, Layout
+Modules, and State styles below.
+
+This style sheet organization is based on the SMACCS system. 
+Please visit the following website for more info: http://smacss.com/
+*/
+
+// Load LESS Library 
+@import "components/_variables";
+
+/****************************
+/////////////////////////////
+
+01. BASE
+
+All base HTML tags that require styling
+
+/////////////////////////////
+****************************/
+
+body {
+  background: @primary-background;
+  font-family: @body-copy;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @primary-text; 
+}
+
+a, a:link, a:visited {
+	color: @primary-link-color;
+}
+
+a:hover {
+	color: @primary-link-color-hover;
+}
+
+/***************************
+////////////////////////////
+
+02. LAYOUT
+
+Styles specific to your layout or website
+
+////////////////////////////
+***************************/
+
+li.navigation-header {
+	color: @blue1;
+	text-transform: uppercase;
+	font-size: (@font-size - 0.25);
+	letter-spacing: 1px;
+	font-weight: 700;
+	margin-bottom: @margin 0;
+	padding-left: 15px;
+}
+
+.charts {
+	text-align: center;
+}
+
+.widgets .panel {
+	text-align: center;
+}
+
+footer {
+	margin-top: (@padding * 6);
+	padding-bottom: (@padding * 2);
+	padding-top: (@padding * 2);
+	border-top: @border-size @border-color @border-type;
+	color: @light-text;
+}
+
+/***************************
+////////////////////////////
+
+03. MODULES
+
+Reusable classes or components
+
+////////////////////////////
+***************************/
+
+
+@import "components/_navbar.less";
+
+@import "components/_typography.less";
+
+@import "components/_pills.less";
+
+@import "components/_navs.less";
+
+@import "components/_charts.less";
+
+@import "components/_panels.less";
+
+@import "components/_tables.less";
+
+@import "components/_buttons.less";
+
+
+/***************************
+////////////////////////////
+
+04. STATES
+
+////////////////////////////
+***************************/
+
+@media (max-width: 768px) {
+	.container {
+		padding-right: @padding;
+		padding-left: @padding;
+	}
+
+	.navbar-form {
+		display: none;
+	}
+
+	ul.nav.navbar-nav.navbar-right {
+		display: none;
+	}
+}

@@ -1,0 +1,210 @@
+/* CONTENTS
+/////////////////////////////////////
+*/
+// 00. LESS
+/*
+01. BASE
+02. LAYOUT
+03. MODULES
+04. STATE
+
+This stylesheet is a starting place. Include your own Base, Layout
+Modules, and State styles below.
+
+This style sheet organization is based on the SMACCS system. 
+Please visit the following website for more info: http://smacss.com/
+*/
+
+// Load LESS Library 
+@import "components/_variables";
+
+/****************************
+/////////////////////////////
+
+01. BASE
+
+All base HTML tags that require styling
+
+/////////////////////////////
+****************************/
+
+body {
+  background: @primary-background;
+  font-family: @body-copy;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @primary-text; 
+}
+
+a, a:link, a:visited {
+	color: @bm-primary;
+}
+
+a:hover {
+	color: @bm-dark-primary;
+}
+
+p {
+	margin-bottom: @margin;
+}
+
+
+/***************************
+////////////////////////////
+
+02. LAYOUT
+
+Styles specific to your layout or website
+
+////////////////////////////
+***************************/
+
+header {
+	text-align: center;	
+}
+
+.logo {
+	margin-top: (@margin * 2);
+}
+
+.filters {
+	margin: (@margin * 2) 0;
+}
+
+.filters div {
+	display: inline-block;
+	margin: 0 (@margin * 2);
+}
+
+.filters a {
+	color: @bm-black;
+}
+
+.filters a:hover {
+	color: @bm-accent;
+}
+
+.search form {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.search input {
+	width: 200px;
+
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.page-body,
+.article {
+	margin: (@margin * 2) 0;
+}
+
+.pagination {
+	text-align: center;
+	margin: (@margin * 2) 0;
+}
+
+.article .container {
+	padding-left: (@padding * 18);
+	padding-right: (@padding * 18);
+}
+
+.article h1 {
+	text-align: center;
+	margin: 0;
+	margin-bottom: (@margin - 0.5);
+	line-height: 1.3;
+	font-weight: 700;
+	color: @bm-black;
+}
+
+.article-meta {
+	margin-bottom: (@margin * 2);
+	text-align: center;
+	color: @bm-light-grey;
+}
+
+.article img {
+	margin-bottom: (@margin * 2);
+}
+
+.footer-top a,
+.footer-bottom a {
+	color: @white;
+	text-decoration: none;
+}
+
+.footer-top a:hover,
+.footer-bottom a:hover {
+	color: @bm-light-grey;
+}
+
+.footer-top {
+	background: @bm-black;
+	color: @white;
+	padding: (@padding * 2);
+}
+
+.footer-top h5 {
+	text-transform: uppercase;
+	color: @bm-accent;
+	font-size: (@font-size - 0.25);
+	letter-spacing: 1px;
+}
+
+.advertisement {
+	text-align: center;
+}
+
+.advertisement .well {
+	margin: 0 (@margin * 4);
+}
+
+.footer-bottom {
+	background: @bm-primary;
+	color: @white;
+	padding: (@padding * 2);
+}
+
+.social-media div {
+	display: inline-block;
+	margin: 0 (@margin - 0.5);
+	float: right;
+}
+
+.border {
+	border: @border-type @border-color @border-size;
+}
+
+.center {
+	text-align: center;
+}
+
+/***************************
+////////////////////////////
+	
+03. MODULES
+
+Reusable classes or components
+
+////////////////////////////
+***************************/
+
+@import "components/_buttons.less";
+
+@import "components/_well.less";
+
+@import "components/_flexbox.less";
+
+@import "components/_forms.less";
+
+
+/***************************
+////////////////////////////
+
+04. STATES
+
+////////////////////////////
+***************************/

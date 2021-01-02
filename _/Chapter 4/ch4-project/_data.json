@@ -1,0 +1,14 @@
+{
+	"index": {
+		"pageTitle": "Bootstrap Wiki"
+	},
+	"article": {
+		"pageTitle": "Article"
+	},
+	"search-results": {
+		"pageTitle": "Search Results"
+	},
+	"profile": {
+		"pageTitle": "Profile"
+	}
+}

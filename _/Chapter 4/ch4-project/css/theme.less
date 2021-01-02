@@ -1,0 +1,234 @@
+/* CONTENTS
+/////////////////////////////////////
+*/
+// 00. LESS
+/*
+01. BASE
+02. LAYOUT
+03. MODULES
+04. STATE
+05. MOBILE
+
+This stylesheet is a starting place. Include your own Base, Layout
+Modules, and State styles below.
+
+This style sheet organization is based on the SMACCS system. 
+Please visit the following website for more info: http://smacss.com/
+*/
+
+// Load LESS Library 
+@import "components/_variables";
+
+/****************************
+/////////////////////////////
+
+01. BASE
+
+All base HTML tags that require styling
+
+/////////////////////////////
+****************************/
+
+body {
+  background: @primary-background;
+  font-family: @body-copy;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @primary-text; 
+}
+
+a, a:link, a:visited {
+	color: @primary-link-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: @primary-link-color-hover;
+}
+
+small {
+	color: @light-grey;
+}
+
+
+/***************************
+////////////////////////////
+
+02. LAYOUT
+
+Styles specific to your layout or website
+
+////////////////////////////
+***************************/
+
+.container {
+	padding: 0 100px;
+}
+
+.header {
+	margin-top: (@margin * 2);
+}
+
+.header a {
+	color: @bw-black;
+	font-weight: bold;
+}
+
+.header a:hover {
+	color: @bw-grey;
+}
+
+.header ul {
+	margin-bottom: 0;
+}
+
+.header ul.list-inline li {
+	margin-right: (@margin * 1.25);
+}
+
+.header-nav {
+	margin-bottom: (@margin * 2);
+}
+
+.page-title {
+	border-bottom: (@border-size * 5) @border-type @border-color;
+	padding-bottom: @padding;
+}
+
+.add-content {
+	line-height: 36px;
+}
+
+.feed {
+ padding: @padding;
+}
+
+.post {
+	margin-top: (@margin * 2);
+	border-bottom: @border-size @border-type @border-color;
+	padding-bottom: (@padding * 1.5);
+}
+
+.post:first-child {
+	margin-top: 0;
+}
+
+.post i {
+	color: @light-grey;
+}
+
+i.favorite {
+	color: @red1;
+}
+
+.feed-pagination {
+	margin-top: (@margin * 2);
+	padding-bottom: (@padding * 2);
+	text-align: right;
+}
+
+.sidebar {
+	background: @secondary-background;
+	padding: @padding;
+	margin-bottom: (@margin * 2);
+}
+
+.sidebar hr {
+	border-color: @bw-light-grey;
+}
+
+.social-media {
+	margin-top: (@margin * 2);
+	padding-bottom: (@padding * 1.5);
+}
+
+.social-media i {
+	font-size: (@font-size * 2);
+}
+
+.footer-languages {
+	background: @inverse-background;
+	color: @bw-black;
+	padding: (@padding * 2) 0;
+}
+
+.footer-languages ul {
+	margin-bottom: 0;
+}
+
+.footer-languages a {
+	color: @white;
+}
+
+.footer-languages a:hover {
+	color: @bw-black;
+}
+
+.footer {
+	color: @bw-light-grey;
+	margin: (@margin * 2) 0;
+}
+
+.footer a {
+	color: @bw-light-grey;
+}
+
+.footer a:hover {
+	color: @bw-grey;
+}
+
+
+/***************************
+////////////////////////////
+
+03. MODULES
+
+Reusable classes or components
+
+////////////////////////////
+***************************/
+
+@import "components/_buttons.less";
+
+@import "components/_well.less";
+
+@import "components/_modal.less";
+
+@import "components/_typography.less";
+
+/***************************
+////////////////////////////
+
+04. STATES
+
+////////////////////////////
+***************************/
+
+
+/***************************
+////////////////////////////
+
+05. MOBILE
+
+////////////////////////////
+***************************/
+
+@media (max-width: 768px) {
+	.container {
+		padding-right: @padding;
+		padding-left: @padding;
+	}
+
+	.add-content {
+		float: left;
+		margin-top: @margin;
+	}
+
+	li.desktop-only {
+		display: none;
+	}
+
+	.modal a {
+		font-size: (@font-size * 2);
+	}
+}

@@ -1,0 +1,22 @@
+table,
+tr,
+tbody {
+	border-color: @dark-grey;
+}
+
+.table-bordered > tbody > tr > td, 
+.table-bordered > tbody > tr > th, 
+.table-bordered > tfoot > tr > td, 
+.table-bordered > tfoot > tr > th, 
+.table-bordered > thead > tr > td, 
+.table-bordered > thead > tr > th {
+	border: @border-size @border-type @border-color;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: @dark-grey;
+}
+
+.table-hover > tbody > tr:hover {
+	background-color: @blue1;
+}
